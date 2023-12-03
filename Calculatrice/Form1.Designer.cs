@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             textField = new TextBox();
-            btndiv = new Button();
+            btnDiv = new Button();
             btn3 = new Button();
             btn1 = new Button();
             btn4 = new Button();
             btn2 = new Button();
-            button1 = new Button();
-            button3 = new Button();
+            btnMulti = new Button();
+            btnSous = new Button();
             btnAdd = new Button();
             bt6 = new Button();
             btn8 = new Button();
@@ -44,6 +44,8 @@
             btn0 = new Button();
             btn9 = new Button();
             btnClear = new Button();
+            btnDot = new Button();
+            btnEgal = new Button();
             SuspendLayout();
             // 
             // textField
@@ -58,17 +60,18 @@
             textField.TabIndex = 0;
             textField.TextAlign = HorizontalAlignment.Right;
             // 
-            // btndiv
+            // btnDiv
             // 
-            btndiv.BackColor = Color.CornflowerBlue;
-            btndiv.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btndiv.ForeColor = Color.White;
-            btndiv.Location = new Point(289, 156);
-            btndiv.Name = "btndiv";
-            btndiv.Size = new Size(63, 47);
-            btndiv.TabIndex = 2;
-            btndiv.Text = "/";
-            btndiv.UseVisualStyleBackColor = false;
+            btnDiv.BackColor = Color.CornflowerBlue;
+            btnDiv.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDiv.ForeColor = Color.White;
+            btnDiv.Location = new Point(289, 156);
+            btnDiv.Name = "btnDiv";
+            btnDiv.Size = new Size(63, 47);
+            btnDiv.TabIndex = 2;
+            btnDiv.Text = "/";
+            btnDiv.UseVisualStyleBackColor = false;
+            btnDiv.MouseClick += btnDiv_MouseClick;
             // 
             // btn3
             // 
@@ -122,29 +125,31 @@
             btn2.UseVisualStyleBackColor = false;
             btn2.MouseClick += btn2_MouseClick;
             // 
-            // button1
+            // btnMulti
             // 
-            button1.BackColor = Color.CornflowerBlue;
-            button1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(199, 156);
-            button1.Name = "button1";
-            button1.Size = new Size(63, 47);
-            button1.TabIndex = 9;
-            button1.Text = "x";
-            button1.UseVisualStyleBackColor = false;
+            btnMulti.BackColor = Color.CornflowerBlue;
+            btnMulti.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMulti.ForeColor = Color.White;
+            btnMulti.Location = new Point(199, 156);
+            btnMulti.Name = "btnMulti";
+            btnMulti.Size = new Size(63, 47);
+            btnMulti.TabIndex = 9;
+            btnMulti.Text = "x";
+            btnMulti.UseVisualStyleBackColor = false;
+            btnMulti.MouseClick += btnMulti_MouseClick;
             // 
-            // button3
+            // btnSous
             // 
-            button3.BackColor = Color.CornflowerBlue;
-            button3.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(105, 156);
-            button3.Name = "button3";
-            button3.Size = new Size(63, 47);
-            button3.TabIndex = 10;
-            button3.Text = "-";
-            button3.UseVisualStyleBackColor = false;
+            btnSous.BackColor = Color.CornflowerBlue;
+            btnSous.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSous.ForeColor = Color.White;
+            btnSous.Location = new Point(105, 156);
+            btnSous.Name = "btnSous";
+            btnSous.Size = new Size(63, 47);
+            btnSous.TabIndex = 10;
+            btnSous.Text = "-";
+            btnSous.UseVisualStyleBackColor = false;
+            btnSous.MouseClick += btnSous_MouseClick;
             // 
             // btnAdd
             // 
@@ -157,6 +162,7 @@
             btnAdd.TabIndex = 11;
             btnAdd.Text = "+";
             btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.MouseClick += btnAdd_MouseClick;
             // 
             // bt6
             // 
@@ -249,12 +255,40 @@
             btnClear.UseVisualStyleBackColor = false;
             btnClear.MouseClick += btnClear_MouseClick;
             // 
+            // btnDot
+            // 
+            btnDot.BackColor = SystemColors.ActiveCaptionText;
+            btnDot.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDot.ForeColor = SystemColors.ButtonHighlight;
+            btnDot.Location = new Point(199, 390);
+            btnDot.Name = "btnDot";
+            btnDot.Size = new Size(63, 47);
+            btnDot.TabIndex = 21;
+            btnDot.Text = ".";
+            btnDot.UseVisualStyleBackColor = false;
+            btnDot.MouseClick += btnDot_MouseClick;
+            // 
+            // btnEgal
+            // 
+            btnEgal.BackColor = Color.FromArgb(64, 0, 0);
+            btnEgal.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEgal.ForeColor = SystemColors.ButtonHighlight;
+            btnEgal.Location = new Point(291, 390);
+            btnEgal.Name = "btnEgal";
+            btnEgal.Size = new Size(63, 47);
+            btnEgal.TabIndex = 22;
+            btnEgal.Text = "=";
+            btnEgal.UseVisualStyleBackColor = false;
+            btnEgal.MouseClick += btnEgal_MouseClick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(366, 458);
             ControlBox = false;
+            Controls.Add(btnEgal);
+            Controls.Add(btnDot);
             Controls.Add(btnClear);
             Controls.Add(btn0);
             Controls.Add(btn9);
@@ -263,13 +297,13 @@
             Controls.Add(bt5);
             Controls.Add(btn7);
             Controls.Add(btnAdd);
-            Controls.Add(button3);
-            Controls.Add(button1);
+            Controls.Add(btnSous);
+            Controls.Add(btnMulti);
             Controls.Add(btn2);
             Controls.Add(btn4);
             Controls.Add(btn1);
             Controls.Add(btn3);
-            Controls.Add(btndiv);
+            Controls.Add(btnDiv);
             Controls.Add(textField);
             Name = "Form1";
             Text = "Calculatrice";
@@ -282,13 +316,13 @@
 
         private TextBox textField;
         private Button chiffre1;
-        private Button btndiv;
+        private Button btnDiv;
         private Button btn3;
         private Button btn1;
         private Button btn4;
         private Button btn2;
-        private Button button1;
-        private Button button3;
+        private Button btnMulti;
+        private Button btnSous;
         private Button btnAdd;
         private Button bt6;
         private Button btn8;
@@ -297,5 +331,7 @@
         private Button btn0;
         private Button btn9;
         private Button btnClear;
+        private Button btnDot;
+        private Button btnEgal;
     }
 }
