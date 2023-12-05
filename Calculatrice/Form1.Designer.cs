@@ -50,19 +50,22 @@
             // 
             // textField
             // 
-            textField.BackColor = SystemColors.HighlightText;
-            textField.BorderStyle = BorderStyle.FixedSingle;
-            textField.Font = new Font("Arial Rounded MT Bold", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textField.BackColor = SystemColors.Desktop;
+            textField.BorderStyle = BorderStyle.None;
+            textField.Font = new Font("Arial Rounded MT Bold", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textField.ForeColor = SystemColors.Info;
             textField.Location = new Point(12, 12);
             textField.Multiline = true;
             textField.Name = "textField";
             textField.Size = new Size(340, 56);
             textField.TabIndex = 0;
             textField.TextAlign = HorizontalAlignment.Right;
+            textField.WordWrap = false;
             // 
             // btnDiv
             // 
             btnDiv.BackColor = Color.CornflowerBlue;
+            btnDiv.FlatStyle = FlatStyle.Flat;
             btnDiv.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnDiv.ForeColor = Color.White;
             btnDiv.Location = new Point(289, 156);
@@ -76,6 +79,7 @@
             // btn3
             // 
             btn3.BackColor = SystemColors.ActiveCaptionText;
+            btn3.FlatStyle = FlatStyle.Flat;
             btn3.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn3.ForeColor = SystemColors.ButtonHighlight;
             btn3.Location = new Point(199, 236);
@@ -89,6 +93,7 @@
             // btn1
             // 
             btn1.BackColor = SystemColors.ActiveCaptionText;
+            btn1.FlatStyle = FlatStyle.Flat;
             btn1.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn1.ForeColor = SystemColors.ButtonHighlight;
             btn1.Location = new Point(12, 236);
@@ -102,6 +107,7 @@
             // btn4
             // 
             btn4.BackColor = SystemColors.ActiveCaptionText;
+            btn4.FlatStyle = FlatStyle.Flat;
             btn4.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn4.ForeColor = SystemColors.ButtonHighlight;
             btn4.Location = new Point(289, 236);
@@ -115,6 +121,7 @@
             // btn2
             // 
             btn2.BackColor = SystemColors.ActiveCaptionText;
+            btn2.FlatStyle = FlatStyle.Flat;
             btn2.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn2.ForeColor = SystemColors.ButtonHighlight;
             btn2.Location = new Point(105, 236);
@@ -128,6 +135,7 @@
             // btnMulti
             // 
             btnMulti.BackColor = Color.CornflowerBlue;
+            btnMulti.FlatStyle = FlatStyle.Flat;
             btnMulti.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnMulti.ForeColor = Color.White;
             btnMulti.Location = new Point(199, 156);
@@ -141,6 +149,7 @@
             // btnSous
             // 
             btnSous.BackColor = Color.CornflowerBlue;
+            btnSous.FlatStyle = FlatStyle.Flat;
             btnSous.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSous.ForeColor = Color.White;
             btnSous.Location = new Point(105, 156);
@@ -154,6 +163,8 @@
             // btnAdd
             // 
             btnAdd.BackColor = Color.CornflowerBlue;
+            btnAdd.FlatAppearance.BorderColor = Color.White;
+            btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAdd.ForeColor = Color.White;
             btnAdd.Location = new Point(12, 156);
@@ -167,6 +178,7 @@
             // bt6
             // 
             bt6.BackColor = SystemColors.ActiveCaptionText;
+            bt6.FlatStyle = FlatStyle.Flat;
             bt6.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             bt6.ForeColor = SystemColors.ButtonHighlight;
             bt6.Location = new Point(105, 310);
@@ -180,6 +192,7 @@
             // btn8
             // 
             btn8.BackColor = SystemColors.ActiveCaptionText;
+            btn8.FlatStyle = FlatStyle.Flat;
             btn8.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn8.ForeColor = SystemColors.ButtonHighlight;
             btn8.Location = new Point(289, 310);
@@ -193,6 +206,7 @@
             // bt5
             // 
             bt5.BackColor = SystemColors.ActiveCaptionText;
+            bt5.FlatStyle = FlatStyle.Flat;
             bt5.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             bt5.ForeColor = SystemColors.ButtonHighlight;
             bt5.Location = new Point(12, 310);
@@ -206,6 +220,7 @@
             // btn7
             // 
             btn7.BackColor = SystemColors.ActiveCaptionText;
+            btn7.FlatStyle = FlatStyle.Flat;
             btn7.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn7.ForeColor = SystemColors.ButtonHighlight;
             btn7.Location = new Point(199, 310);
@@ -219,6 +234,7 @@
             // btn0
             // 
             btn0.BackColor = SystemColors.ActiveCaptionText;
+            btn0.FlatStyle = FlatStyle.Flat;
             btn0.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn0.ForeColor = SystemColors.ButtonHighlight;
             btn0.Location = new Point(105, 390);
@@ -232,6 +248,7 @@
             // btn9
             // 
             btn9.BackColor = SystemColors.ActiveCaptionText;
+            btn9.FlatStyle = FlatStyle.Flat;
             btn9.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn9.ForeColor = SystemColors.ButtonHighlight;
             btn9.Location = new Point(12, 390);
@@ -245,6 +262,7 @@
             // btnClear
             // 
             btnClear.BackColor = Color.Fuchsia;
+            btnClear.FlatStyle = FlatStyle.Flat;
             btnClear.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnClear.ForeColor = Color.White;
             btnClear.Location = new Point(12, 88);
@@ -258,6 +276,7 @@
             // btnDot
             // 
             btnDot.BackColor = SystemColors.ActiveCaptionText;
+            btnDot.FlatStyle = FlatStyle.Flat;
             btnDot.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnDot.ForeColor = SystemColors.ButtonHighlight;
             btnDot.Location = new Point(199, 390);
@@ -271,6 +290,7 @@
             // btnEgal
             // 
             btnEgal.BackColor = Color.FromArgb(64, 0, 0);
+            btnEgal.FlatStyle = FlatStyle.Flat;
             btnEgal.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEgal.ForeColor = SystemColors.ButtonHighlight;
             btnEgal.Location = new Point(291, 390);
@@ -285,6 +305,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(366, 458);
             ControlBox = false;
             Controls.Add(btnEgal);

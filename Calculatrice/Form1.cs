@@ -83,7 +83,7 @@ namespace Calculatrice
 
         }
 
-     
+
 
         // fonctions qui affectent l'operateur
         private void btnAdd_MouseClick(object sender, MouseEventArgs e)
@@ -98,9 +98,9 @@ namespace Calculatrice
 
         private void btnSous_MouseClick(object sender, MouseEventArgs e)
         {
-            string a=textField.Text;
+            string a = textField.Text;
             // essaie de convertir a en float si true elle sera stocke dans number1
-            float.TryParse(a,out number1);
+            float.TryParse(a, out number1);
             textField.Text = "";
             operateur = "-";
 
@@ -137,9 +137,9 @@ namespace Calculatrice
             float.TryParse(b, out number2);
             if (operateur == "+")
             {
-            //  convertir en float le resultat et l'afficher
-            float result= number1-number2;
-            textField.Text = result.ToString();
+                //  convertir en float le resultat et l'afficher
+                float result = number1 - number2;
+                textField.Text = result.ToString();
             }
             else if (operateur == "-")
             {
@@ -151,8 +151,23 @@ namespace Calculatrice
             }
             else if (operateur == "/")
             {
-                textField.Text = (number1 / number2).ToString();
+                // gerer si on veut diviser par zero ou si l'un des nombre est null
+                if (number2 == 0 || number1 == 0)
+                {
+                    textField.Text = "impossible";
+                }
+                else
+                {
+                    textField.Text = (number1 / number2).ToString();
+                }
+
+
+
+
             }
         }
     }
 }
+
+
+
