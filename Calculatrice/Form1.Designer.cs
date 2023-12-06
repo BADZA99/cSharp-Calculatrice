@@ -57,6 +57,7 @@
             textField.Location = new Point(12, 12);
             textField.Multiline = true;
             textField.Name = "textField";
+            textField.ReadOnly = true;
             textField.Size = new Size(340, 56);
             textField.TabIndex = 0;
             textField.TextAlign = HorizontalAlignment.Right;
@@ -305,6 +306,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(366, 458);
             ControlBox = false;
@@ -326,6 +328,7 @@
             Controls.Add(btn3);
             Controls.Add(btnDiv);
             Controls.Add(textField);
+            ForeColor = SystemColors.ControlText;
             Name = "Form1";
             Text = "Calculatrice";
             Load += Form1_Load;
